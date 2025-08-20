@@ -41,7 +41,7 @@ module "routes" {
   igw_id              = module.igw.igw_id
   public_subnet_ids   = module.subnets.public_subnet_ids
   private_subnet_ids  = module.subnets.private_subnet_ids
-  create_public_rt    = true
+  create_public_rt    = false
   create_private_rt   = length(module.subnets.private_subnet_ids) > 0
   tags                = local.common_tags
 }
